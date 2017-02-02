@@ -1,0 +1,33 @@
+<view class="calendar-root">
+    <view class="calendar-navbar">
+        <view class="calendar-navbar-button" bindtap="goToday">今日</view>
+        <view class="calendar-navbar-button" bindtap="goLastMonth">{{"<"}}</view>
+        <view class="calendar-navbar-date">{{date}}</view>
+        <view class="calendar-navbar-button" bindtap="goNextMonth">{{">"}}</view>
+        <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+            <view>跳转</view>
+        </picker>
+    </view>
+    <view class="calendar-head">
+        <view wx:for="一二三四五六日" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="calendar-body">
+        <view class="calendar-body-rows" wx:for="123456" wx:for-index="row" wx:key="*this">
+            <view class="calendar-body-cols" wx:for="1234567" wx:for-index="col" wx:key="*this">
+                <view class="calendar-body-item" wx:if="{{arrIsShow[row * 7 + col]}}" data-day-index="{{row * 7 + col}}" bindtap="selectDay">
+                    <view class="calendar-body-day">
+                        {{arrDays[row * 7 + col]}}
+                    </view>
+                    <view class="calendar-body-dayex">
+                        {{arrInfoExShow[row * 7 + col]}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="calendar-detail">
+        <view class="calendar-detail-day">{{detailData.curDay}}</view>
+        <view class="calendar-detail-info1">{{detailData.curInfo1}}</view>
+        <view class="calendar-detail-info2">{{detailData.curInfo2}}</view>
+    </view>
+</view>

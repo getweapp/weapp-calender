@@ -1,0 +1,95 @@
+.calendar-root{
+    font-family: simhei;
+    background: #eee;
+    height:100%;
+}
+
+.calendar-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 83rpx;
+}
+.calendar-navbar-button{
+    flex-grow: 1;
+    width: 100rpx;
+    height: 50rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+.calendar-navbar-date{
+    flex-grow: 1;
+    width: 150rpx;
+    height: 50rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.calendar-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80rpx;
+    background: #fff;
+    font-size: 35rpx;
+}
+.calendar-head view{
+    text-align: center;
+    flex:1;
+}
+
+.calendar-body{
+    background: #fff;
+}
+.calendar-body-rows{
+    display: flex;
+    align-items: center;
+    height: 98rpx;
+    padding: 0 4rpx 8rpx;
+}
+.calendar-body-cols{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 100%;
+    padding: 0 4rpx;
+}
+.calendar-body-item{
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.calendar-body-day{
+    text-align: center;
+}
+.calendar-body-dayex{
+    text-align: center;
+    font-size: 25rpx;
+}
+
+.calendar-detail{
+    background: #fff;
+}
+.calendar-detail-day{
+    display:inline;
+    position: absolute;
+    margin-left: 80rpx;
+    font-size: 100rpx;
+    font-weight: bold;
+    color: red;
+}
+.calendar-detail-info1{
+    margin-left: 210rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.calendar-detail-info2{
+    margin-left: 210rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    font-size: 25rpx;
+}
